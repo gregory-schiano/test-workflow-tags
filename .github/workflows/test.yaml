@@ -1,0 +1,16 @@
+name: Test push workflow
+run-name: Test push workflow
+
+on: push
+jobs:
+  print-info:
+    name: Print info
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print info
+      run: |
+        echo "GITHUB_REF = ${GITHUB_REF}"
+        echo "GITHUB_REF_NAME = ${GITHUB_REF_NAME}"
+        echo "GITHUB_REF_TYPE = ${GITHUB_REF_TYPE}"
+        echo "GITHUB_SHA = ${GITHUB_SHA}"
+        
